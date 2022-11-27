@@ -8,8 +8,6 @@ from order.models import Order,OrderItem
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
 
-product_id=1
-request=2
 
 def _cart_id(request): #checking if a session id has been created on the customer browser
 	cart = request.session.session_key
@@ -17,29 +15,7 @@ def _cart_id(request): #checking if a session id has been created on the custome
 		cart = request.session.create()
 	return cart
 
-def add_cart():
-	product = Product.objects.get(id = product_id)
-	try: #getting a cart by id and if it does'nt exist then we will create the cart
-		cart = Cart.objects.get(cart_id = _cart_id(request))
-	except Cart.DoesNotExist:
-		cart = Cart.objects.create(
-				cart_id = _cart_id(request)
-			)
-		cart.save()
-	try:
-		cart_item = CartItem.objects.get(product = product, cart =cart) #adding product to cart
-		if cart_item.quantity < cart_item.product.stock:
-			cart_item.quantity += 1
-		cart_item.save()
-	except CartItem.DoesNotExist:
-		cart_item = CartItem.objects.create(
-				product = product,
-				quantity = 1,
-				cart = cart
-			)
-		cart_item.save()
-
-def add_cart2(request, product_id):
+def add_cart(request, product_id):
 	product = Product.objects.get(id = product_id)
 	try: #getting a cart by id and if it does'nt exist then we will create the cart
 		cart = Cart.objects.get(cart_id = _cart_id(request))

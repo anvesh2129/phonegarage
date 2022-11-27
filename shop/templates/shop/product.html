@@ -29,8 +29,6 @@
 						<p class="my_title"> <b>Product Description</b> </p>
 						<p class="text-justify my_prod_text">{{product.description}}</p>
 						<p> </p>
-						<p>User Ratings: 0/5</p>
-						<p><a href="{% url 'r_r' %}">Add Rating & Review</a> </p>
 						{% if product.stock <= 0 %}
 							<p class="text-justify my_prod_text"><b>Out of Stock</b></p>
 						{% else %}

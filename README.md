@@ -1,5 +1,4 @@
-# Django-E-Commerce
-This is an E-Commerce web application made using Django through which you can create an account,buy products of different categories,place an order using Stripe and recieve emails using Mailgun.
+# PhoneGarage (E-Commerce site) with Django Framework
 
 ## How to setup and run the Project
 
@@ -11,16 +10,14 @@ command to collect static files into STATIC_ROOT
 
 * To run the application enter command :~ `python manage.py runserver`
 
-* To access stripe and mailgun features create your own account in their sites and add the api keys and password in settings.py file of phonegarage directory accordingly.
-
 * To create a fresh database remove the database file and the migrations and run commands:~
+
+* Delete the sqlite database file (often db.sqlite3) in your django project folder (or wherever you placed it)
+* Delete everything except __init__.py file from migration folder in all django apps (eg: rm */migrations/0*.py)
+* Make changes in your models (models.py).
+* Run below commands:
 `python manage.py makemigrations`
 `python manage.py migrate`
 
-* For any queries contact me.
-
-## Some Blogs i wrote while creating this project
-
-* [How to interact with django shell using django ORM](https://medium.com/@ksarthak4ever/django-models-and-shell-8c48963d83a3)
-
-* [How to use MongoDb with Django](https://medium.com/@ksarthak4ever/how-to-use-django-with-mongodb-40ba36a21124)
+* Create admin user
+`python manage.py createsuperuser`

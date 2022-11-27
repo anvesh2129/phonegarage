@@ -59,7 +59,7 @@ def signupView(request):
 			form.save()
 			username = form.cleaned_data.get('username')
 			signup_user = User.objects.get(username = username)
-			customer_group = Group.objects.get(name = 'Customer')  #ERROR at this line. Corrected group was called Customer.
+			customer_group = Group.objects.get(name = 'customers')  #ERROR at this line. Corrected group was called Customer.
 			customer_group.user_set.add(signup_user)
 	else:
 		form = SignUpForm()
