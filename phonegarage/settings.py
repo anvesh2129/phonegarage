@@ -148,5 +148,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' #using crispy form as it applies the right b
 EMAIL_HOST = 'smtp.mailgun.org' #smpt is Simple Mail Transfer Protocol
 EMAIL_PORT = '587' #this is a secured port that uses TLS(Transport Layer Security) Encryption
 EMAIL_USE_TLS = True #as the port is using TLS
-EMAIL_HOST_USER = 'postmaster@sandbox0d47c097915b4f359580d0c4173a116d.mailgun.org' #using mailgun sandbox as it is free after we create an free acount
-EMAIL_HOST_PASSWORD = 'aa9e945e9f0aeadc9cab549da40742f9-2de3d545-623cf217'
+EMAIL_HOST_USER = 'postmaster@sandbox115823aa3ca446ce92a161fd86d78367.mailgun.org' #using mailgun sandbox as it is free after we create an free acount
+EMAIL_HOST_PASSWORD = '9af454fec2f94f8a5d9d20b96374cd6c-f2340574-9236e110'

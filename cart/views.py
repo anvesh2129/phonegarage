@@ -153,7 +153,7 @@ def sendEmail(order_id):
 	try:
 		'''Sending the order'''
 		subject = "Phone Garage Store - New Order #{}".format(transaction.id) #using the transaction method to interpolate the transaction id in the curly brackets of the subject
-		to = ['{}'.format(transaction.emailAddress)]
+		to = ['{}'.format(transaction.emailAddress)] #tomail
 		from_email = "orders@phonegaragestore.com"
 		order_information = {
 		'transaction' : transaction,
